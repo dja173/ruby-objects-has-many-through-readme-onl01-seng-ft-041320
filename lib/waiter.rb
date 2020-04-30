@@ -25,8 +25,10 @@ class Waiter
   sam.new_meal(alex, 20, 3) # A Customer creates a Meal, passing in a Waiter instance
   pat.new_meal(sam, 30, 5) # A Waiter creates a Meal, passing in a Customer instance
   end
- 
+
+def waiters
+  meals.map do |meal|
+    meal.waiter
+  end
 end
-
-
  
