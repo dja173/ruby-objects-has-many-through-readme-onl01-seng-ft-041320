@@ -26,9 +26,8 @@ class Waiter
   pat.new_meal(sam, 30, 5) # A Waiter creates a Meal, passing in a Customer instance
   end
 
-def waiters
-  meals.map do |meal|
-    meal.waiter
+def meals
+  Meal.all.select do |meal|
+    meal.waiter == self #checking for waiter now
   end
 end
- 
