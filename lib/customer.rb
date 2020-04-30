@@ -23,5 +23,6 @@ def meals
     meal.customer == self
   end
   
+  
 end
 
